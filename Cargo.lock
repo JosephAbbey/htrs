@@ -296,6 +296,8 @@ version = "0.1.0"
 dependencies = [
  "paste",
  "rstml-component",
+ "serde",
+ "serde_derive",
  "tokio",
  "warp",
 ]
