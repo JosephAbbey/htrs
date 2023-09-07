@@ -99,7 +99,7 @@ components! {
                 <input type="text" name="text" />
                 <button type="submit">add</button>
             </form>
-            <div sse-swap="message" id="todos">
+            <div id="todos">
                 <ToDos todos=self.todos />
             </div>
             <img id="spinner" class="htmx-indicator" src="https://i.gifer.com/ZKZg.gif" width="40" />
@@ -165,6 +165,6 @@ async fn main() {
                 }
         }
     )
-    .run(([192, 168, 1, 48], 80))
+    .run(([127, 0, 0, 1], 80))
     .await;
 }
