@@ -90,7 +90,7 @@ components! {
             <button hx-get="/todos" hx-target="#todos" hx-indicator="#spinner">refresh</button>
             <form
                 hx-post="/todos"
-                hx-vars="js:{ id: Math.max(...[...document.querySelectorAll('#todos li')].map((e) => parseInt(e.id))) + 1 }"
+                hx-vars="js:{ id: Math.max(-1, ...[...document.querySelectorAll('#todos li')].map((e) => parseInt(e.id))) + 1 }"
                 hx-target="#todos > ul"
                 hx-swap="beforeend"
                 hx-on:htmx:after-request="this.reset()"
